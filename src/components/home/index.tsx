@@ -7,14 +7,14 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { ProductsSection } from "@/components/home/sections/products-section";
 
-export function HomePage() {
+export function HomePage({ searchQuery = "" }: { searchQuery?: string }) {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <SiteHeader />
       <HeroCarousel />
       <TrustStrip />
       <CategoriesSection />
-      <ProductsSection />
+      <ProductsSection searchQuery={searchQuery} />
       <ContactSection />
       <LocationSection />
       <SiteFooter />
